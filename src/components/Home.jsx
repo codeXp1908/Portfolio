@@ -24,7 +24,7 @@ const Home = () => {
       case "contact":
         return <Contact />;
       default:
-        return <About />;
+        return <Landing />;
     }
   };
 
