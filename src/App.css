@@ -282,3 +282,61 @@ body {
     }
   }
 }
+
+
+/* ABOUT SECTION  */
+
+.about_Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about_Title {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.about_Content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  text-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: justify;
+  color: white;
+}
+
+.about_name {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.skill_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill_section h2{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.75em;
+  margin-bottom: 10px;
+}
+
+  /* CERTIFICATE SECTION  */
+
+  .certificate_Title {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }

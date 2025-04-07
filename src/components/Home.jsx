@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Portfolio from "./Portfolio";
-import Showcase from "./Showcase";
+import Certificate from "./Certificate";
 import Landing from "./Landing";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -17,8 +17,8 @@ const Home = () => {
         return <Landing />;
       case "about":
         return <About />;
-      case "showcase":
-        return <Showcase />;
+      case "certificate":
+        return <Certificate />;
       case "portfolio":
         return <Portfolio />;
       case "contact":
@@ -74,11 +74,11 @@ const Home = () => {
               </li>
               <li className="nav_Btn">
                 <a
-                  href="#showcase"
-                  onClick={() => handleNavClick("showcase")}
-                  className={activeLink === "showcase" ? "active" : ""}
+                  href="#certificate"
+                  onClick={() => handleNavClick("certificate")}
+                  className={activeLink === "certificate" ? "active" : ""}
                 >
-                  Showcase
+                  Certificate
                 </a>
               </li>
               <li className="nav_Btn">
