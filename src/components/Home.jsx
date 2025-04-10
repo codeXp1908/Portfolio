@@ -1,115 +1,55 @@
-import React, { useState } from "react";
-import About from "./About";
-import Contact from "./Contact";
-import Portfolio from "./Portfolio";
-import Certificate from "./Certificate";
-import Landing from "./Landing";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React from "react";
+import Navbar from "../utils/Navbar";
+import profilepic from "../assets/profile.png";
+import ScrollAnimation from "../utils/ScrollAnimations";
+import handwave from "../assets/Waving Hand icon.svg";
+import { FaArrowDownLong } from "react-icons/fa6";
+import ScrollAnimationLeft from "../utils/ScrollAnimationLeft";
 
 const Home = () => {
-  const [currentView, setCurrentView] = useState("about");
-  const [activeLink, setActiveLink] = useState("about");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const renderContent = () => {
-    switch (currentView) {
-      case "landing":
-        return <Landing />;
-      case "about":
-        return <About />;
-      case "certificate":
-        return <Certificate />;
-      case "portfolio":
-        return <Portfolio />;
-      case "contact":
-        return <Contact />;
-      default:
-        return <Landing />;
-    }
-  };
-
-  const handleNavClick = (view) => {
-    setCurrentView(view);
-    setActiveLink(view);
-    setIsMobileMenuOpen(false); // Close mobile menu when a link is clicked
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
-    <div className="Home_Container">
-      {/* Mobile Header */}
-      <div className="mobile-header">
-        <h1 className="title_Text">Prakhar.</h1>
-        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+    <>
+      {/* HEADER SECTION  */}
+      <div className="w-full h-screen body text-sm flex flex-col justify-between">
+        <ScrollAnimation>
+          <Navbar />
+        </ScrollAnimation>
 
-      <div className={`title_Container ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-        <h1 className="title_Text desktop-title">Prakhar.</h1>
+        <div className="flex-1 flex flex-col justify-around">
+          {/* IMAGE SECTION  */}
+          <ScrollAnimationLeft>
+            <div className="justify-center items-center flex flex-col mt-4 sm:mt-0">
+              <div className="image_Container flex items-center justify-center">
+                <img 
+                  src={profilepic} 
+                  className="circular-image w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40" 
+                  alt="Profile" 
+                />
+              </div>
+              <span className="img-text bg-white text-base sm:text-lg md:text-xl flex font-semibold items-center mt-2">
+                FrontEnd Developer{" "}
+              </span>
+            </div>
+          </ScrollAnimationLeft>
 
-        <div className="sideBar_Container">
-          <section className="navLinks_Container">
-            <ul className="nav_Links">
-              <li className="nav_Btn">
-                <a
-                  href="#landing"
-                  onClick={() => handleNavClick("landing")}
-                  className={activeLink === "landing" ? "active" : ""}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="nav_Btn">
-                <a
-                  href="#about"
-                  onClick={() => handleNavClick("about")}
-                  className={activeLink === "about" ? "active" : ""}
-                >
-                  About
-                </a>
-              </li>
-              <li className="nav_Btn">
-                <a
-                  href="#certificate"
-                  onClick={() => handleNavClick("certificate")}
-                  className={activeLink === "certificate" ? "active" : ""}
-                >
-                  Certificate
-                </a>
-              </li>
-              <li className="nav_Btn">
-                <a
-                  href="#portfolio"
-                  onClick={() => handleNavClick("portfolio")}
-                  className={activeLink === "portfolio" ? "active" : ""}
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li className="nav_Btn">
-                <a
-                  href="#contact"
-                  onClick={() => handleNavClick("contact")}
-                  className={activeLink === "contact" ? "active" : ""}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </section>
+          {/* TEXT SECTION  */}
+          <ScrollAnimation>
+            <div className="home_Text flex flex-col items-center sm:p-10 justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium">
+              <span className="text-gradient py-1! sm:py-1">Building digital</span>
+              <span className="text-gradient sm:py-1!">products, projects</span>
+              <span className="text-gradient sm:py-1!">and experience.</span>
+            </div>
+          </ScrollAnimation>
         </div>
 
-        <div className="copyright_Container">
-          <p>Copyright&copy;</p>
+        {/* SCROLL INDICATOR */}
+        <div className="scroll flex flex-col items-center justify-center text-xl h-16 sm:h-20 pb-4 sm:pb-0">
+          <p className="scroll_arrow flex items-center">
+            <FaArrowDownLong className="text-lg sm:text-xl" />
+          </p>
         </div>
       </div>
-
-      <div className="Content_Container">{renderContent()}</div>
-    </div>
+    </>
   );
 };
 

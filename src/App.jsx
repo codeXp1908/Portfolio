@@ -1,13 +1,23 @@
-import React from 'react'
-import Home from './components/Home'
-import "./App.css"
+import React, { useRef } from "react";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Certificate from "./Components/Certificate";
+import Showcase from "./Components/Showcase";
+import Contact from "./Components/Contact";
+import "./App.css";
 
 const App = () => {
   return (
     <>
-    <Home/>
+      <div className="p-body">
+        <Home />
+        <About />
+        <Certificate />
+        <Showcase />
+        <Contact />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
