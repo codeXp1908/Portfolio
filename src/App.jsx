@@ -1,5 +1,5 @@
 import React from "react";
-import Home from './Components/Home.jsx';
+import Home from './components/Home.jsx';
 import About from "./Components/About.jsx";
 import Certificate from "./Components/Certificate.jsx";
 import Showcase from "./Components/Showcase.jsx";
