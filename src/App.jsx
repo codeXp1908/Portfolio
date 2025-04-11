@@ -9,7 +9,7 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <div className="p-body">
+      <div className="p-body select-none">
         <Home />
         <About />
         <Certificate />

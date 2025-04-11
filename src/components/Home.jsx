@@ -26,7 +26,7 @@ const Home = () => {
                   alt="Profile" 
                 />
               </div>
-              <span className="img-text bg-white text-base sm:text-lg md:text-xl flex font-semibold items-center mt-2">
+              <span className="img-text bg-white text-base sm:text-lg md:text-xl flex font-semibold items-center mt-2 select-none">
                 FrontEnd Developer{" "}
               </span>
             </div>
@@ -34,7 +34,7 @@ const Home = () => {
 
           {/* TEXT SECTION  */}
           <ScrollAnimation>
-            <div className="home_Text flex flex-col items-center sm:p-10 justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium">
+            <div className="home_Text flex flex-col items-center sm:p-10 justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium select-none">
               <span className="text-gradient py-1! sm:py-1">Building digital</span>
               <span className="text-gradient sm:py-1!">products, projects</span>
               <span className="text-gradient sm:py-1!">and experience.</span>
