@@ -19,7 +19,7 @@ const Navbar = () => {
       <section className="navbar_Right p-4 sm:p-10 flex gap-2.5 items-center justify-center sm:justify-start">
         <ul className="social_Tab flex gap-2 text-xs sm:text-sm font-semibold">
           <li><a href="/">Linkedln /</a></li>
-          <li><a href="/">Github</a></li>
+          <li><a href="https://github.com/codeXp1908">Github</a></li>
         </ul>
       </section>
     </div>

@@ -21,12 +21,12 @@ const Certificate = () => {
 
   return (
     <div className="certificate_Container h-screen w-full body">
-      <div className="certificate_Title text-gray-700 text-6xl uppercase font-bold underline underline-offset-8 p-10">
-        <h1>Certificates</h1>
+      <div className="certificate_Title text-gray-700 text-6xl uppercase font-bold underline underline-offset-8">
+        <h1 className="px-3 py-10 text-[30px] text-center md:text-6xl md:text-left">Certificates</h1>
       </div>
-      <div className="certificate_Slider flex items-center justify-center p-10 h-[90%]">
+      <div className="certificate_Slider flex items-center justify-center p-10 h-[50%] md:h-[90%]">
         <div className="h-full w-full max-w-7xl">
-          <Carousel slideInterval={1000} leftControl={<FaChevronLeft className="text-3xl" />} rightControl={<FaChevronRight className="text-3xl" />}>
+          <Carousel slideInterval={1000} leftControl={<FaChevronLeft className="text-xl md:text-3xl" />} rightControl={<FaChevronRight className="text-xl md:text-3xl" />}>
             {certs.map((cert, index) => (
               <img 
                 key={index} 

@@ -31,7 +31,7 @@ const ScrollAnimationLeft = ({ children }) => {
     <div
       ref={ref}
       className={`transition-all duration-1000 ease-in-out ${
-        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-100'
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
       }`}
     >
       {children}
