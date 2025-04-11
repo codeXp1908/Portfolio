@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../utils/Navbar";
 import profilepic from "../assets/profile.png";
 import ScrollAnimation from "../utils/ScrollAnimations";
-import handwave from "../assets/Waving Hand icon.svg";
 import { FaArrowDownLong } from "react-icons/fa6";
 import ScrollAnimationLeft from "../utils/ScrollAnimationLeft";
 
