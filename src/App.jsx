@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Certificate from "./Components/Certificate";
-import Showcase from "./Components/Showcase";
-import Contact from "./Components/Contact";
+import React from "react";
+import Home from "./Components/Home.jsx";
+import About from "./Components/About.jsx";
+import Certificate from "./Components/Certificate.jsx";
+import Showcase from "./Components/Showcase.jsx";
+import Contact from "./Components/Contact.jsx";
 import "./App.css";
 
 const App = () => {
